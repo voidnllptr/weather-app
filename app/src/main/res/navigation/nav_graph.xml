@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.weatherapp.feature.auth.presentation.ui.LogInFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_registration"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_login_to_weather"
+            app:destination="@id/weatherFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.weatherapp.feature.auth.presentation.ui.RegistrationFragment"
+        android:label="@string/registration"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_registration_to_weather"
+            app:destination="@id/weatherFragment" />
+        <action
+            android:id="@+id/action_registration_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.weatherapp.feature.weather.presentation.ui.WeatherFragment"
+        android:label="@string/weather"
+        tools:layout="@layout/fragment_weather">
+        <action
+            android:id="@+id/action_weatherFragment_to_weatherDetailFragment"
+            app:destination="@id/weatherDetailFragment"
+            app:popUpTo="@id/weatherFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/weatherDetailFragment"
+        android:name="com.example.weatherapp.feature.weather.presentation.ui.WeatherDetailFragment"
+        android:label="@string/weather_detail"
+        tools:layout="@layout/fragment_weather_detail">
+        <action
+            android:id="@+id/action_weatherDetailFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment"
+            app:popUpTo="@id/weatherFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/calculatorFragment"
+        android:name="com.example.weatherapp.feature.calculator.presentation.ui.CalculatorFragment"
+        android:label="@string/calculator" />
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.weatherapp.feature.list.presentation.ui.JewelryFragment"
+        android:label="@string/list" />
+</navigation>

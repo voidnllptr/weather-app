@@ -1,10 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Weather App</string>
+    <string name="login">Вход</string>
+    <string name="registration">Регистрация</string>
+    <string name="weather">Погода</string>
+    <string name="weather_detail">Детали прогноза</string>
+    <string name="calculator">Калькулятор</string>
+    <string name="list">Список</string>
+    <string name="error_connection">Ошибка загрузки</string>
+
+    <string name="login_title">Добро пожаловать</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Пароль</string>
+    <string name="login_button">Войти</string>
+    <string name="go_to_register">Нет аккаунта? Зарегистрироваться</string>
+
+    <string name="error_email_empty">Email не может быть пустым</string>
+    <string name="error_invalid_email">Неверный формат email</string>
+    <string name="error_password_empty">Пароль не может быть пустым</string>
+    <string name="error_password_too_short">Пароль должен содержать минимум 6 символов</string>
+    <string name="error_confirm_password_empty">Подтверждение пароля не может быть пустым</string>
+    <string name="error_passwords_not_match">Пароли не совпадают</string>
+    <string name="error_invalid_credentials">Неверные учетные данные</string>
+    <string name="error_user_already_exists">Пользователь уже существует</string>
+    <string name="error_login_generic">Ошибка входа: %s</string>
+    <string name="error_registration_generic">Ошибка регистрации: %s</string>
+
+    <string name="register_title">Регистрация</string>
+    <string name="confirm_password_hint">Подтвердите пароль</string>
+    <string name="register_button">Зарегистрироваться</string>
+    <string name="go_to_login">Уже есть аккаунт? Войти</string>
+
     <string name="weather_title">Прогноз погоды</string>
-    <string name="city_name">Москва, Россия</string>
+    <string name="weather_detail_title">Детали прогноза</string>
+    <string name="city_name">Санкт-Петербург, Россия</string>
     <string name="temperature_unit">°C</string>
     <string name="feels_like">Ощущается как</string>
     <string name="humidity">Влажность</string>
     <string name="wind_speed">Скорость ветра</string>
     <string name="pressure">Давление</string>
+
+    <string name="calculator_clear">AC</string>
+    <string name="calculator_delete">⌫</string>
+    <string name="calculator_divide">÷</string>
+    <string name="calculator_multiply">×</string>
+    <string name="calculator_minus">-</string>
+    <string name="calculator_plus">+</string>
+    <string name="calculator_equals">=</string>
+    <string name="calculator_dot">.</string>
+    <string name="calculator_zero">0</string>
+    <string name="calculator_one">1</string>
+    <string name="calculator_two">2</string>
+    <string name="calculator_three">3</string>
+    <string name="calculator_four">4</string>
+    <string name="calculator_five">5</string>
+    <string name="calculator_six">6</string>
+    <string name="calculator_seven">7</string>
+    <string name="calculator_eight">8</string>
+    <string name="calculator_nine">9</string>
+    <string name="calculator_result_default">0</string>
+    <string name="calculator_error">Ошибка</string>
+
+    <string name="jewelry_type_keychain">Брелок</string>
+    <string name="jewelry_type_necklace">Ожерелье</string>
+    <string name="jewelry_type_hairclip">Заколка</string>
+    <string name="jewelry_brand_sanrio">Санрио</string>
+    <string name="jewelry_brand_aliexpress">Алик</string>
+    <string name="currency_ruble">₽</string>
+    <string name="price_format">%d ₽</string>
+
 </resources>

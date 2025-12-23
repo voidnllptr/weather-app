@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="activity_weather_padding">8dp</dimen>
+
     <dimen name="card_margin">8dp</dimen>
     <dimen name="card_corner_radius">8dp</dimen>
     <dimen name="card_elevation">4dp</dimen>
     <dimen name="card_padding">16dp</dimen>
-    <dimen name="text_small">14sp</dimen>
-    <dimen name="text_medium">16sp</dimen>
-    <dimen name="text_large">18sp</dimen>
-    <dimen name="text_very_large">20sp</dimen>
-    <dimen name="margin_bottom">16dp</dimen>
-    <dimen name="margin_big_bottom">24dp</dimen>
+
+    <dimen name="text_small">10sp</dimen>
+    <dimen name="text_medium">14sp</dimen>
+    <dimen name="text_large">16sp</dimen>
+    <dimen name="text_very_large">18sp</dimen>
+
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+
     <dimen name="weather_detail_layout_dimen">120dp</dimen>
     <dimen name="weather_item_layout_dimen">60dp</dimen>
     <dimen name="weather_item_start_margin">16dp</dimen>
     <dimen name="weather_item_margin_top">4dp</dimen>
+    <dimen name="weather_detail_margin_bottom">8dp</dimen>
+
+    <dimen name="calculator_screen_padding">8dp</dimen>
+    <dimen name="calculator_display_margin_bottom">12dp</dimen>
+    <dimen name="calculator_buttons_margin_top">12dp</dimen>
+    <dimen name="calculator_button_row_margin_bottom">6dp</dimen>
+    <dimen name="calculator_button_spacing">6dp</dimen>
+    <dimen name="calculator_button_size_min">56dp</dimen>
+
 </resources>
 

@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.WeatherApp" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
+
+    <style name="Theme.WeatherApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/subtle_pink</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/pale_pink</item>
+
+        <item name="colorSecondary">@color/subtle_pink</item>
+        <item name="colorSecondaryVariant">@color/sweet_pink</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColorPrimary">@color/black</item>
     </style>
+
 </resources>

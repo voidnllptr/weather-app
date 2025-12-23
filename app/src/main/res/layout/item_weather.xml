@@ -1,60 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/card_margin"
-    app:cardCornerRadius="@dimen/card_corner_radius"
-    app:cardElevation="@dimen/card_elevation">
+    android:elevation="@dimen/card_elevation"
+    android:orientation="vertical"
+    android:padding="@dimen/card_padding"
+    android:clipToPadding="false"
+    android:background="@android:color/white">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="@dimen/card_padding">
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:gravity="center_vertical">
 
-        <ImageView
-            android:id="@+id/ivWeatherIcon"
-            android:layout_width="@dimen/weather_item_layout_dimen"
-            android:layout_height="@dimen/weather_item_layout_dimen"
-            android:layout_gravity="center_vertical" />
+<TextView
+    android:id="@+id/tvFormattedDate"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:textSize="@dimen/text_medium"
+    android:textStyle="bold"
+    android:textColor="@android:color/black"/>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="@dimen/weather_item_start_margin"
-            android:orientation="vertical">
+<TextView
+    android:id="@+id/tvDayOfWeek"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/text_small"
+    android:textColor="@color/black" />
 
-            <TextView
-                android:id="@+id/tvDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/text_medium"
-                android:textStyle="bold"
-                android:textColor="@android:color/white" />
+<TextView
+    android:id="@+id/tvTodayIndicator"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/text_small"
+    android:textColor="@color/black"
+    android:visibility="gone" />
 
-            <TextView
-                android:id="@+id/tvTemperature"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/text_large"
-                android:textStyle="bold"
-                android:layout_marginTop="@dimen/weather_item_margin_top"
-                android:textColor="@android:color/white" />
+</LinearLayout>
 
-            <TextView
-                android:id="@+id/tvDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/text_small"
-                android:layout_marginTop="@dimen/weather_item_margin_top"
-                android:textColor="@android:color/white" />
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:layout_marginTop="@dimen/weather_item_margin_top"
+android:gravity="center_vertical">
 
-        </LinearLayout>
+<TextView
+    android:id="@+id/tvMaxTemp"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:textSize="@dimen/text_very_large"
+    android:textStyle="bold"
+    android:textColor="@android:color/black" />
+
+<ImageView
+    android:id="@+id/ivWeatherIcon"
+    android:layout_width="@dimen/weather_item_layout_dimen"
+    android:layout_height="@dimen/weather_item_layout_dimen"
+    android:layout_marginStart="@dimen/weather_item_start_margin"
+    android:scaleType="centerCrop" />
+
+</LinearLayout>
+
+<TextView
+android:id="@+id/tvWeather"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="@dimen/weather_item_margin_top"
+android:textSize="@dimen/text_medium"
+android:textColor="@android:color/black"
+    android:gravity="center" />
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:layout_marginTop="@dimen/spacing_medium"
+android:gravity="center">
+
+<TextView
+    android:id="@+id/tvMinTemp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/text_small"
+    android:textColor="@color/black" />
+
+<TextView
+    android:id="@+id/tvWindSpeed"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/text_small"
+    android:textColor="@color/black" />
+
+</LinearLayout>
 
     </LinearLayout>
-
-</androidx.cardview.widget.CardView>
-

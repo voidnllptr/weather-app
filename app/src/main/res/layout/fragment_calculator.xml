@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/calculator_screen_padding"
+    android:background="@color/pale_pink">
+
+    <LinearLayout
+        android:id="@+id/containerCalculator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/card_padding">
+
+        <LinearLayout
+            android:id="@+id/layoutDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/card_padding"
+            android:layout_marginBottom="@dimen/calculator_display_margin_bottom"
+            android:background="@color/white"
+            android:clipToOutline="true">
+
+            <TextView
+                android:id="@+id/tvExpression"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textSize="@dimen/text_medium"
+                android:textColor="@color/black"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginTop="@dimen/weather_item_margin_top"
+                android:textSize="@dimen/text_very_large"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="@string/calculator_result_default" />
+
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginTop="@dimen/weather_detail_margin_bottom"
+                android:textSize="@dimen/text_small"
+                android:text="@string/calculator_error"
+                android:textColor="@color/vampiric_pink"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutButtons"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/calculator_buttons_margin_top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/calculator_button_row_margin_bottom">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnClear"
+                    style="@style/CalculatorButton.Error"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:layout_marginEnd="@dimen/calculator_button_spacing"
+                    android:text="@string/calculator_clear"
+                    android:textSize="@dimen/text_medium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDelete"
+                    style="@style/CalculatorButton.Neutral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:layout_marginEnd="@dimen/calculator_button_spacing"
+                    android:text="@string/calculator_delete"
+                    android:textSize="@dimen/text_medium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDivide"
+                    style="@style/CalculatorButton.Primary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:text="@string/calculator_divide"
+                    android:textSize="@dimen/text_medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/calculator_button_row_margin_bottom">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn7"
+                    style="@style/CalculatorButton.Neutral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:layout_marginEnd="@dimen/calculator_button_spacing"
+                    android:text="@string/calculator_seven"
+                    android:textSize="@dimen/text_medium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn8"
+                    style="@style/CalculatorButton.Neutral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:layout_marginEnd="@dimen/calculator_button_spacing"
+                    android:text="@string/calculator_eight"
+                    android:textSize="@dimen/text_medium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn9"
+                    style="@style/CalculatorButton.Neutral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:layout_marginEnd="@dimen/calculator_button_spacing"
+                    android:text="@string/calculator_nine"
+                    android:textSize="@dimen/text_medium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMultiply"
+                    style="@style/CalculatorButton.Primary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:text="@string/calculator_multiply"
+                    android:textSize="@dimen/text_medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/calculator_button_row_margin_bottom">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn4"
+                    style="@style/CalculatorButton.Neutral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:layout_marginEnd="@dimen/calculator_button_spacing"
+                    android:text="@string/calculator_four"
+                    android:textSize="@dimen/text_medium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn5"
+                    style="@style/CalculatorButton.Neutral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:layout_marginEnd="@dimen/calculator_button_spacing"
+                    android:text="@string/calculator_five"
+                    android:textSize="@dimen/text_medium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn6"
+                    style="@style/CalculatorButton.Neutral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:layout_marginEnd="@dimen/calculator_button_spacing"
+                    android:text="@string/calculator_six"
+                    android:textSize="@dimen/text_medium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMinus"
+                    style="@style/CalculatorButton.Primary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:text="@string/calculator_minus"
+                    android:textSize="@dimen/text_medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/calculator_button_row_margin_bottom">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn1"
+                    style="@style/CalculatorButton.Neutral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:layout_marginEnd="@dimen/calculator_button_spacing"
+                    android:text="@string/calculator_one"
+                    android:textSize="@dimen/text_medium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn2"
+                    style="@style/CalculatorButton.Neutral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:layout_marginEnd="@dimen/calculator_button_spacing"
+                    android:text="@string/calculator_two"
+                    android:textSize="@dimen/text_medium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn3"
+                    style="@style/CalculatorButton.Neutral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:layout_marginEnd="@dimen/calculator_button_spacing"
+                    android:text="@string/calculator_three"
+                    android:textSize="@dimen/text_medium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPlus"
+                    style="@style/CalculatorButton.Primary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:text="@string/calculator_plus"
+                    android:textSize="@dimen/text_medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn0"
+                    style="@style/CalculatorButton.Neutral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:layout_marginEnd="@dimen/calculator_button_spacing"
+                    android:text="@string/calculator_zero"
+                    android:textSize="@dimen/text_medium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDot"
+                    style="@style/CalculatorButton.Neutral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:layout_marginEnd="@dimen/calculator_button_spacing"
+                    android:text="@string/calculator_dot"
+                    android:textSize="@dimen/text_medium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEquals"
+                    style="@style/CalculatorButton.PrimaryFilled"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/calculator_button_size_min"
+                    android:text="@string/calculator_equals"
+                    android:textSize="@dimen/text_medium" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
